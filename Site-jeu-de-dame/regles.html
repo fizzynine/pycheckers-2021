@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="shortcut icon" type="image/x-icon" href="images/jd.ico" />
+      <title>PYCHECKERS Projet Python</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   </head>
+   <body id="contenu">
+      <img class= "fixed h w" src="images/jdbg.gif">
+      <!--image en fond qui bouge pas "parallax" -->
+      <!--<div class="relative para flexcolumn flexcenter"><h2 class="relative fs_3a para-titre c_white u">Python checkers </h2></div>   -->
+      <nav class="relative flexcolumn flexcenter w shadow" >
+         <!-- permet de centrer ul et d'avoir
+            l'ombre sur toute la page -->
+         <a class="nav-open" href="#contenu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+         <a class="nav-close" href="#"><i class="fas fa-times"></i></a>	          
+         <ul>
+            <li><a href="https://univ-jfc.fr"><img src="images/uc.svg" height="80px"></a></li>
+            <li><a class="link" href="index.html">Accueil</a></li>
+            <li><a class="link" href="regles.html">Règles du jeu</a></li>
+            <li><a class="link" href="histoire.html">Histoire du Jeu</a></li>
+            <li><a class="link" href="projet.html">Le Projet </a></li>
+            <li><a class="link" href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+      <div id="mtop" class="ml_4 mr_4 mt_4 mb_4 relative bg_opa_black bd_b_blue bd_l_3 bd_t_blue bd_l_blue bd_r_blue bd_t_3 pb_3">
+         <!-- Debut exemple -->
+         <div class="relative ">
+            <h2 class="relative c_gold fs_4 pb_3 text-glow pink ml_4" style="width:120px height=220px">Règles du Jeu de Dames International</h2>
+            <h2 class="relative c_gold fs_3 pb_3  ml_4" style="width:50px height=50px">Le matériel</h2>
+         </div>
+         <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3">
+            <h2 class="relative c_gray fs_3 pb_3">Disposition initiale</h2>
+            <img class="relative p_r" src="images/capture/d1.png" alt="" width="200px" height="200px">
+            Le jeu de dames international se joue sur un damier carré divisé en 100 cases égales, alternativement claires et foncées.
+            <br/>
+            Le jeu se joue sur les cases foncées du damier. Il y a donc 50 cases actives. La plus longue diagonale, joignant deux coins du damier et comprenant 10 cases foncées, se dénomme la grande diagonale.
+            </br>
+            Le damier doit être placé de sorte que la première case de gauche, pour chaque joueur, soit une case foncée.
+            </br>
+            Le jeu de dames international se joue avec 20 pions blancs (clairs) et 20 pions noirs (foncés). Avant de débuter une partie, les 20 pions noirs et les 20 pions blancs sont disposés sur les 4 premières rangées de chaque joueur.
+         </div>
+         <br>
+         <br>
+         <h2 class="relative c_gold fs_3 pb_3 ml_4" style="width:50px height=50px">La marche des pièces</h2>
+         <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3">
+            <img class="relative p_r" src="images/capture/d2.png" alt="" width="200px" height="200px">
+            <h2 class="relative c_gray fs_3 pb_3">le déplacement des pions</h2>
+            Un pion se déplace obligatoirement vers l’avant, en diagonale, d’une case sur une case libre de la rangée suivante<br>
+            Lorsqu'il atteint la dernière rangée, le pion devient dame. Pour cela, on couronne le pion en plaçant dessus un deuxième pion de la même couleur.<br>
+         </div>
+         <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3">
+            <img class="relative p_l mr_4" src="images/capture/depl_dame.png" alt="" width="200px" height="200px">
+            <h2 class="relative c_gray fs_3 pb_3">le déplacement des dames</h2>
+            Une dame doit attendre que l’adversaire ait joué au moins une fois avant d’entrer en action.
+            <br/>
+            Une dame se déplace en arrière ou en avant sur les cases libres successives de la diagonale qu’elle occupe.
+            <br/>
+            Elle peut donc se poser, au-delà de cases libres, sur une case libre éloignée.
+         </div>
+         <br>
+         <br>
+         <h2 class="relative c_gold fs_3 pb_3 ml_4" style="width:50px height=50px">La prise</h2>
+         <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3">
+            <img class="relative p_r" src="images/capture/p_p1.png" alt="" width="200px" height="200px">
+            <h2 class="relative c_gray fs_3 pb_3">Prise par un pion</h2>
+            La prise des pièces adverse est obligatoire et s’effectue aussi bien en avant qu’en arrière.
+            <br>
+            Lorsqu’un pion se trouve en présence, diagonalement, d’une pièce adverse derrière laquelle se trouve une case libre, il doit obligatoirement sauter par-dessus cette pièce et occuper la case libre.
+            <br>
+            Cette pièce adverse est alors enlevée du damier.
+            <br><br>
+            Cette opération complète est la prise par un pion.
+         </div>
+         <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3">
+            <img class="relative p_l mr_4" src="images/capture/p_d1.png" alt="" width="200px" height="200px">
+            <h2 class="relative c_gray fs_3 pb_3">Prise par une dame</h2>
+            Lorsqu’une dame se trouve en présence sur la même diagonale, directement ou à distance, d’une pièce adverse derrière laquelle se trouvent une ou plusieurs cases libres, elle doit obligatoirement passer par-dessus cette pièce et occuper, au choix, une des cases libres. Cette pièce est alors enlevée du damier.
+            <br><br>
+            Cette opération complète est la prise par une dame.
+         </div>
+         <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3">
+            <h2 class="relative c_gray fs_3 pb_3">Rafle par un pion</h2>
+            Lorsqu’au cours d’une prise par un pion, celui-ci se trouve à nouveau en présence, diagonalement, d’une pièce adverse derrière laquelle se trouve une case libre, il doit obligatoirement sauter par-dessus cette seconde pièce, voire d’une troisième et ainsi de suite, et occuper la case libre se trouvant derrière la dernière pièce capturée. Les pièces adverses ainsi capturées sont ensuite enlevées du damier dans l’ordre de la prise.
+            <br><br>
+            Cette opération complète est une rafle par un pion.
+         </div>
+         <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3">
+            <h2 class="relative c_gray fs_3 pb_3">Rafle par une dame</h2>
+            Lorsqu’au cours d’une prise par une dame, celle-ci se trouve à nouveau en présence, sur une même diagonale, d’une pièce adverse derrière laquelle se trouve une ou plusieurs cases libres, elle doit obligatoirement sauter par-dessus cette seconde pièce, voire d’une troisième et ainsi de suite, et occuper au choix une case libre se trouvant derrière et sur la même diagonale que la dernière pièce capturée. Les pièces adverses ainsi capturées sont ensuite enlevées du damier dans l’ordre de la prise.
+            <br><br>
+            Cette opération complète est une rafle par une dame.
+         </div>
+         <br>
+         <br>
+         <h2 class="relative c_gold fs_3 pb_3 ml_4" style="width:50px height=50px">Le résultat</h2>
+         <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3">
+            <h2 class="relative c_gray fs_3 pb_3">La victoire</h2>
+            La victoire est obtenu par un joueur lorsque son adversaire:
+            <br><br>
+            <div class="ml_3">
+               * Abandonne la partie
+               <br>
+               * Se trouve dans l’impossibilité de jouer 
+               <br>
+               * N’a plus de pièces
+            </div>
+            <br>
+            L’égalité, dénommée aussi remise ou nulle, est obtenue pour chacun des adversaires :
+            <br><br>
+            <div class="ml_3">
+               * Qui la déclare, de commun accord
+               <br>
+               * Lorsqu’aucun des deux ne parvient au gain 
+            </div>
+         </div>
+      </div>
+      <div class="flexcolumn flexcenter relative w h" style="background-color: #102652">
+         <a class="link" href="mention_l.html">Mention légale</a>
+         </h2>
+         <h2 class="fs_1a p c_white">Copyright © PyCheckers 2020-2021</h2>
+      </div>
+   </body>
+</html>

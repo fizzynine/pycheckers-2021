@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="shortcut icon" type="image/x-icon" href="images/jd.ico" />
+      <title>PYCHECKERS Projet Python</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   </head>
+   <body id="contenu">
+      <img class= "fixed h w" src="images/jdbg.gif">
+      <!--image en fond qui bouge pas "parallax" -->
+      <!--<div class="relative para flexcolumn flexcenter"><h2 class="relative fs_3a para-titre c_white u">Python checkers </h2></div>   -->
+      <nav class="relative flexcolumn flexcenter w shadow" >
+         <!-- permet de centrer ul et d'avoir
+            l'ombre sur toute la page -->
+         <a class="nav-open" href="#contenu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+         <a class="nav-close" href="#"><i class="fas fa-times"></i></a>	          
+         <ul>
+            <li><a href="https://univ-jfc.fr"><img src="images/uc.svg" height="80px"></a></li>
+            <li><a class="link" href="index.html">Accueil</a></li>
+            <li><a class="link" href="regles.html">Règles du jeu</a></li>
+            <li><a class="link" href="histoire.html">Histoire du Jeu</a></li>
+            <li><a class="link" href="projet.html">Le Projet </a></li>
+            <li><a class="link" href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+      <div id="mtop" class="ml_4 mr_4 mt_4 mb_4 relative bg_opa_black bd_b_blue bd_l_3 bd_t_blue bd_l_blue bd_r_blue bd_t_3 pb_3 bg_opa_black">
+         <!--      
+            <div class="relative w flexcolumn flexcenter">
+                  <div class="relative c_white typewriter" style="width: 280px;">
+                    <h1 class="center"></h1>
+                  </div>
+                  <div class="relative c_white typewriter" style="width: 280px;">
+                    <h1 class="center">Ligne Code python</h1>
+                  </div>
+                </div>--> 
+         <!-- ici -->
+         <div class="relative">
+            <h2 class="relative c_gold fs_4 pb_3 text-glow pink ml_4" style="width:120px height=220px">Manuel d'utilisation</h2>
+            <div class="relative c_white typewriter ml_4" style="width: 300px;height: 33px;">
+               <h1 class="center c_lightblue fs_3 pb_3" style="height: 13px;">La création du damier</h1>
+            </div>
+            <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3 mt_3  pb_2">
+               <img class="relative p_r" src="images/genere.png" alt="" width="300px" height="300px">
+               <p class ="c_gold fs_2a">Le damier est stocké sous forme d'une matrice 10x10.</p>
+               <p class= "c_white fs_1a">
+                  <br>Chaque numéro correspond à un état différent !
+                  <br>0=case blanche
+                  <br>1=case noire 
+                  <br>2=case noire qui contient un pion blanc
+                  <br>3=case noire qui contient un pion noire
+                  <br>4=case noire qui contient une reine blanche
+                  <br>5=case noire qui contient une noire
+                  <br>
+                  <br>On a utilisé la fonction <b class="c_lightblue">grid()</b>
+                  pour agencer des boutons si c'est des cases noires et des labels  
+                  si c'est des cases blanches.
+                  <br>On sait que la fonction <b class="c_lightblue">bind_class()</b> qui permet d'écouter des évenements n'écoutent que le type de widget mit en paramètre. Comme on va mettre en paramètre un bouton, eh bien on aura pas à gérer les clicks sur les cases blanches puisquent qu'ils seront pas écoutées.
+               </p>
+            </div>
+            <br>
+            <br>
+            <div class="relative c_white typewriter ml_4" style="width: 355px;height: 33px;">
+               <h1 class="center c_lightblue fs_3 pb_3 " style="height: 13px;">Le déplacement des pions</h1>
+            </div>
+            <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3 mt_3">
+               <p class= "c_white fs_1a">
+                  Pour le déplacement du pion, il faut prendre en compte beaucoup de paramètre. 
+                  <br>
+                  <br>
+                  Le pion peut se déplacer d'une case plus haute dans ses diagonales.
+                  <br>
+                  Pour manger il faut vérifier qu'il y a un pion ou une dame adverse dans les cases diagonales et vérifier sur la même diagonales que la case suivante soit vide. Si toutes les conditions sont correctes alors le pion peut sauter grâce à une fonction <b class="c_lightblue">déplacementsauts()</b>, la case où était située le pion adverse et les cases suggérer seront ensuite effacer par la fontion <b class="c_lightblue"> nettoyer()</b>.
+               </p>
+            </div>
+            <br>
+            <br>
+            <div class="relative c_white typewriter ml_4" style="width: 355px;height: 33px;">
+               <h1 class="center c_lightblue fs_3 pb_3 " style="height: 13px;">La rafle par un pion</h1>
+            </div>
+            <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3 mt_3">
+               <p class= "c_white fs_1a">
+                  Le pion peut manger dans toutes les diagonales.   
+                  <br>Un pion peut manger une seconde fois s'il existe une possibilité de faire un second saut. La rafle du pion s'arrête lorsqu'il ne peut plus manger.
+               </p>
+            </div>
+            <br>
+            <br>
+            <div class="relative c_white typewriter ml_4" style="width: 355px;height: 33px;">
+               <h1 class="center c_lightblue fs_3 pb_3 " style="height: 13px;">Le déplacement des dames</h1>
+            </div>
+            <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3 mt_3">
+               <p class= "c_white fs_1a">
+                  La dame peut se déplacer en avant ou en arrière sur tout les diagonales du damier grâce aux boucles for de la fonction <b class="c_lightblue">déplacementsauts()</b> qui prend en compte aussi les déplacement de la dame
+                  <br>
+                  La dame peut manger un pion ou une dame sur toutes les diagonales du damier si la case suivante est vide. La dame ne peut sauter une pièce alliée.
+               </p>
+            </div>
+            <br>
+            <div class="relative c_white typewriter ml_4" style="width: 355px;height: 33px;">
+               <h1 class="center c_lightblue fs_3 pb_3 " style="height: 13px;">La rafle par une dame</h1>
+            </div>
+            <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3 mt_3">
+               <p class= "c_white fs_1a">
+                  Une dame peut manger une seconde fois s'il existe une possibilité de faire un second saut. La rafle de la dame s'arrête lorsqu'elle ne peut plus manger.
+               </p>
+            </div>
+            <br>
+            <br>
+            <div class="relative c_white typewriter ml_4" style="width: 355px;height: 33px;">
+               <h1 class="center c_lightblue fs_3 pb_3 " style="height: 13px;">Les pions soufflés</h1>
+            </div>
+            <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3 mt_3">
+               <img class="relative p_r" src="images/pionAsouffle.png" alt="" width="300px" height="200px">
+               <p class= "c_white fs_1a">
+                  Si vous preferez jouer un déplacement avec un pion, alors qu'un ou plusieurs autre(s) pion(s) peuvent mangé un pion adverse alors ils sont automatiquement soufflés grâce à notre fonction <b class="c_lightblue">pionAsouffle()</b> !
+               </p>
+            </div>
+            <br>
+            <br>
+            <div class="relative c_white typewriter ml_4" style="width: 355px;height: 33px;">
+               <h1 class="center c_lightblue fs_3 pb_3 " style="height: 13px;">La fin de partie</h1>
+            </div>
+            <div class="relative mr_2 fs_2 c_white pl_4 bd_l_gray ml_3 mt_3">
+               <img class="relative p_r" src="images/capture/f2.png" alt="" width="100px" height="100px">
+               <p class="c_white fs_1a">
+                  Si il n'y a plus de pion blanc/noir à manger, les noirs/blancs remportent la partie.
+                  <br>
+                  <br>Si plus personne peut se déplacer, il y a égalité.
+                  <br>Un autre cas d'égalité est s'il y a autant de pion chez les noirs que les blancs quand le temps est écoulé.
+               </p>
+            </div>
+            <br>
+            <br>
+         </div>
+      </div>
+      <!-- footer -->
+      <div class="flexcolumn flexcenter relative w h" style="background-color: #102652">
+         <a class="link" href="mention_l.html">Mention légale</a>
+         </h2>
+         <h2 class="fs_1a p c_white">Copyright © PyCheckers 2020-2021</h2>
+      </div>
+   </body>
+</html>
